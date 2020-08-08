@@ -5,6 +5,7 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 
+# defines web pages here
 def index(request):
     # create variable now and set it to the current time
     now = datetime.now()
@@ -18,5 +19,15 @@ def index(request):
             'title' : "Hello Django",
             'message' : "Hello Django!",
             'content' : " on " + now.strftime("%A, %d %B, %Y at %X")
+        }
+    )
+
+def about(request):
+    return render(
+        request,
+        "DjangoApp1/about.html",
+        {
+            'title' : "About HelloDjangoApp",
+            'content' : "Example app page for Django."
         }
     )

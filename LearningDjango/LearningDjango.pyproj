@@ -44,12 +44,16 @@
     <Compile Include="LearningDjango\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DjangoApp1\static\site.css" />
+    <Content Include="DjangoApp1\templates\DjangoApp1\about.html" />
     <Content Include="DjangoApp1\templates\DjangoApp1\index.html" />
+    <Content Include="DjangoApp1\templates\DjangoApp1\layout.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DjangoApp1\" />
     <Folder Include="DjangoApp1\migrations\" />
+    <Folder Include="DjangoApp1\static\" />
     <Folder Include="DjangoApp1\templates\" />
     <Folder Include="DjangoApp1\templates\DjangoApp1\" />
     <Folder Include="LearningDjango\" />
