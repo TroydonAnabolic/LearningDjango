@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #  tells the Django project that there's a folder of that name containing an app
+    'DjangoApp1',
 ]
 
 # Middleware framework

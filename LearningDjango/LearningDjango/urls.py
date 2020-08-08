@@ -25,6 +25,6 @@ import DjangoApp1.views
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
-     url(r'^$', DjangoApp1.views.index, name='index'),
+     url(r'^$', DjangoApp1.views.index, name='index'), # r means not to escape any chars with escap chat /
     url(r'^home$', DjangoApp1.views.index, name='home'),
 ]
