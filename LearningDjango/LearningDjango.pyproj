@@ -3,6 +3,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>LearningDjango</Name>
     <RootNamespace>LearningDjango</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -29,6 +30,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DjangoApp1\admin.py" />
+    <Compile Include="DjangoApp1\apps.py" />
+    <Compile Include="DjangoApp1\migrations\__init__.py" />
+    <Compile Include="DjangoApp1\models.py" />
+    <Compile Include="DjangoApp1\tests.py" />
+    <Compile Include="DjangoApp1\views.py" />
+    <Compile Include="DjangoApp1\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="LearningDjango\__init__.py" />
     <Compile Include="LearningDjango\settings.py" />
@@ -36,10 +44,26 @@
     <Compile Include="LearningDjango\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DjangoApp1\templates\DjangoApp1\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DjangoApp1\" />
+    <Folder Include="DjangoApp1\migrations\" />
+    <Folder Include="DjangoApp1\templates\" />
+    <Folder Include="DjangoApp1\templates\DjangoApp1\" />
     <Folder Include="LearningDjango\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.8</Version>
+      <Description>env (Python 3.8 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
